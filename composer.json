@@ -2,16 +2,33 @@
   "name": "itwebmaster/json-attribute-behavior",
   "description": "Yii2 trait for easy JSON attribute handling with schema validation",
   "type": "library",
-  "autoload": {
-    "psr-4": {
-      "itwebmaster\\JsonAttributeBehavior\\": "src/"
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ivan Tymchyna",
+      "email": "it.web.master@icloud.com"
     }
-  },
+  ],
   "require": {
     "php": ">=7.4",
     "yiisoft/yii2": "^2.0.38",
     "yidas/yii2-composer-bower-skip": "^2.0"
   },
+  "require-dev": {
+    "phpunit/phpunit": "^9.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "itwebmaster\\JsonAttributeBehavior\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "tests\\": "tests/"
+    }
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true,
   "config": {
     "process-timeout": 1800,
     "preferred-install": "dist",
@@ -23,8 +40,5 @@
     "yii\\composer\\Installer::postCreateProject": [
       "yidas\\yii2\\composer\\bower\\BowerSkipInstaller::postCreateProject"
     ]
-  },
-  "require-dev": {
-    "phpunit/phpunit": "^9.5"
   }
 }
